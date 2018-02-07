@@ -18,6 +18,8 @@ define('port',default=8888,help='run on the given port',type=int)
 
 class Application(tornado.web.Application):
     def __init__(self):
+        # create router
+        logger.info(__name__)
         handlers =[
             (r"/",MainHandler),
         ]
